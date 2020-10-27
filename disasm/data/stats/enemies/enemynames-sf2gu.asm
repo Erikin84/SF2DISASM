@@ -1,7 +1,7 @@
 
-; ASM FILE data\stats\enemies\enemynames.asm :
-; 0xFB8A..0xFF87 : Enemy names
-EnemyNames:     enemyName "Ooze"
+; ASM FILE data\stats\enemies\enemynames-sf2gu.asm :
+; Enemy names
+tbl_EnemyNames: enemyName "Ooze"
                 enemyName "Wolf"
                 enemyName "Galam Soldier"
                 enemyName "Galam Knight"
@@ -101,6 +101,6 @@ EnemyNames:     enemyName "Ooze"
                 enemyName "Galam"
                 enemyName "Zeon"
                 enemyName "Jaro"
-                enemyName "Master Mage"
-                enemyName "NecroMancer"
+                enemyName "Dark Madam"
+                enemyName "Necromancer"
                 enemyName "Warlock"

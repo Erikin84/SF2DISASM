@@ -1,11 +1,10 @@
 
 ; ASM FILE data\graphics\battles\battlesprites\allyidlebattlesprites-sf2gu.asm :
-; 0x1FAD6..0x1FADD : Ally Idle Battle Sprites
-AllyBSpriteIdleAnimate:
-                dc.b $FF                  ; IDs of ally battle sprites which do not animate while idle
-                dc.b $FF
-                dc.b $FF
-                dc.b $FF
-                dc.b $FF
-                dc.b $FF
-                dc.b $FF
+; Ally Idle Battle Sprites
+tbl_AllyBattleSpriteIdleAnimate:
+                
+; Indexes of ally battle sprites which do not animate while idle
+                
+; Syntax        allyBattleSprite [ALLYBATTLESPRITE_]index
+                
+                tableEnd.b

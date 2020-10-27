@@ -5,32 +5,17 @@
 
 
                 include "code\gameflow\battle\battlescenes\battlesceneengine_0.asm"    ; Battlescene engine
-                
-                if (PROJECT_SF2GU=1)
-                include "data\stats\allies\allybattlesprites-sf2gu.asm"
-                include "data\stats\enemies\enemybattlesprites-sf2gu.asm"
-				include "data\stats\items\weapongraphics-sf2gu.asm"
-                else
-                include "data\stats\allies\allybattlesprites.asm"    ; Ally battle sprites table
-                include "data\stats\enemies\enemybattlesprites.asm"    ; Enemy battle sprites table
-				include "data\stats\items\weapongraphics.asm"    ; Weapon graphics table
-                endif
-                
-                include "data\battles\global\custombackgrounds.asm"    ; Battle custom backgrounds table
+                include "data\battles\global\terrainbackgrounds.asm"    ; Terrain backgrounds table
                 include "code\gameflow\battle\battlescenes\battlesceneengine_1.asm"    ; Battlescene engine
-                
-                if (PROJECT_SF2GU=1)
-                include "data\graphics\battles\battlesprites\allyidlebattlesprites-sf2gu.asm"
-                include "data\graphics\battles\battlesprites\enemyidlebattlesprites-sf2gu.asm"
-                else
-                include "data\graphics\battles\battlesprites\allyidlebattlesprites.asm"    ; Ally Idle Battle Sprites
-                include "data\graphics\battles\battlesprites\enemyidlebattlesprites.asm"    ; Enemy Idle Battle Sprites
-                endif
-                
-                include "code\gameflow\battle\battlescenes\battlesceneengine_2.asm"    ; Battlescene engine
-                
-                if (PROJECT_SF2GU=1)
+                include "data\stats\allies\allybattlesprites-sf2gu.asm"    ; Ally battle sprites table (SF2GU)
+                include "data\stats\enemies\enemybattlesprites-sf2gu.asm"    ; Enemy battle sprites table (SF2GU)
+                include "data\stats\items\weapongraphics-sf2gu.asm"    ; Weapon graphics table (SF2GU)
+                include "data\battles\global\custombackgrounds.asm"    ; Battle custom backgrounds table
+                wordAlign
+                include "data\battles\global\backgroundenemyswitch.asm"    ; Background enemy switch table
+                include "data\graphics\battles\battlesprites\allyidlebattlesprites-sf2gu.asm"    ; Ally Idle Battle Sprites (SF2GU)
+                include "data\graphics\battles\battlesprites\enemyidlebattlesprites-sf2gu.asm"    ; Enemy Idle Battle Sprites (SF2GU)
+BackgroundLayout:
+                incbin "data/graphics/tech/backgroundlayout.bin"
                 include "data\stats\allies\centaurbattlesprites-sf2gu.asm" ; Centaur battle sprite and spear throw animation indexes table
-                endif
-                
                 align $20000
